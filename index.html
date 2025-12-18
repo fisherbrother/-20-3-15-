@@ -1,395 +1,161 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>跨学科视角下的数学时间悖论解析</title>
+    <title>奶龙祝江文生日快乐！</title>
+    <!-- 引入Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: #FFFFFF;
-        }
-        .card {
-            background-color: white;
-            border: 1px solid #E5E7EB;
-            border-radius: 1.25rem; /* 20px */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            overflow: hidden;
-            position: relative;
-        }
-        .highlight-gradient-blue {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.05));
-        }
-        .highlight-gradient-purple {
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0), rgba(139, 92, 246, 0.05));
-        }
-        .highlight-gradient-teal {
-            background: linear-gradient(135deg, rgba(20, 184, 166, 0), rgba(20, 184, 166, 0.05));
-        }
-        .highlight-gradient-amber {
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0), rgba(245, 158, 11, 0.05));
-        }
-        .highlight-gradient-red {
-            background: linear-gradient(135deg, rgba(239, 68, 68, 0), rgba(239, 68, 68, 0.05));
-        }
-        .highlight-gradient-green {
-            background: linear-gradient(135deg, rgba(34, 197, 94, 0), rgba(34, 197, 94, 0.05));
-        }
-        .math-symbols {
-            font-family: 'KaTeX_Main', 'Times New Roman', serif;
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        }
-        .number-card {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .theory-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .chart-container {
-            position: relative;
-            height: 100%;
-            width: 100%;
-        }
-        .timeline-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 1rem;
-        }
-        .timeline-line {
-            width: 2px;
-            height: 100%;
-            margin-left: 5px;
-            background-color: #E5E7EB;
-        }
-    </style>
-</head>
-<body class="bg-white">
-    <div class="max-w-7xl mx-auto p-4 md:p-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
-            <!-- 主标题卡片 -->
-            <div class="card md:col-span-4 p-8 md:p-12 flex flex-col justify-center items-center text-center relative">
-                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>
-                <div class="relative z-10">
-                    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">跨学科视角下的数学时间悖论解析</h1>
-                    <p class="text-xl md:text-2xl text-gray-600 font-light">探索一个看似荒谬却蕴含深刻理论价值的反直觉命题</p>
-                </div>
-            </div>
-
-            <!-- 核心等式展示 -->
-            <div class="card md:col-span-4 p-8 flex flex-col md:flex-row justify-around items-center relative">
-                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-purple"></div>
-                <div class="number-card p-4 md:p-8 flex-1">
-                    <div class="text-6xl md:text-8xl font-bold text-purple-600 math-symbols">$\frac{20}{3}$</div>
-                    <div class="text-xl md:text-2xl text-gray-700 mt-2">个世纪</div>
-                </div>
-                <div class="text-5xl md:text-7xl font-thin text-gray-400 my-4 md:my-0">= <i class="fa-solid fa-equals"></i></div>
-                <div class="number-card p-4 md:p-8 flex-1">
-                    <div class="text-6xl md:text-8xl font-bold text-purple-600">15</div>
-                    <div class="text-xl md:text-2xl text-gray-700 mt-2">年</div>
-                </div>
-                <div class="text-5xl md:text-7xl font-thin text-gray-400 my-4 md:my-0">= <i class="fa-solid fa-equals"></i></div>
-                <div class="number-card p-4 md:p-8 flex-1">
-                    <div class="text-6xl md:text-8xl font-bold text-purple-600">十七</div>
-                    <div class="text-xl md:text-2xl text-gray-700 mt-2">年</div>
-                </div>
-            </div>
-
-            <!-- 引言卡片 -->
-            <div class="card md:col-span-4 p-8 flex flex-col justify-center relative">
-                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-teal"></div>
-                <div class="relative">
-                    <h2 class="text-3xl font-bold text-teal-700 mb-4 flex items-center">
-                        <i class="fa-solid fa-lightbulb mr-3"></i>引言
-                    </h2>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        在数学认知和时间度量的交叉研究领域，存在着一类看似荒谬却蕴含深刻理论价值的反直觉命题。本文聚焦于一个极具挑战性的等式：$\frac{20}{3}$个世纪 = 15 = 十七年。
-                    </p>
-                    <p class="text-gray-700 leading-relaxed">
-                        从经典数学角度审视，这个等式显然违背了基本的量纲一致性——$\frac{20}{3}$个世纪约等于666.67年，而15年和"十七年"仅为其约1/44的时长。然而，正是这种表面的矛盾性激发了我们对数学基础理论、时间哲学以及跨文化认知机制的深入思考。
-                    </p>
-                </div>
-            </div>
-
-            <!-- 理论框架概述 -->
-            <div class="card md:col-span-4 p-8 flex flex-col justify-center relative">
-                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-amber"></div>
-                <div class="relative">
-                    <h2 class="text-3xl font-bold text-amber-700 mb-6 flex items-center">
-                        <i class="fa-solid fa-sitemap mr-3"></i>理论框架概述
-                    </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                        <div class="bg-amber-50 p-4 rounded-lg border border-amber-100">
-                            <div class="text-amber-600 text-2xl mb-2"><i class="fa-solid fa-calculator"></i></div>
-                            <h3 class="font-bold text-amber-800 mb-2">数学基础理论</h3>
-                            <p class="text-sm text-amber-700">非标准分析、模糊数学、多值逻辑</p>
-                        </div>
-                        <div class="bg-amber-50 p-4 rounded-lg border border-amber-100">
-                            <div class="text-amber-600 text-2xl mb-2"><i class="fa-solid fa-clock-rotate-left"></i></div>
-                            <h3 class="font-bold text-amber-800 mb-2">时间度量</h3>
-                            <p class="text-sm text-amber-700">跨文化时间认知、物理学时间概念</p>
-                        </div>
-                        <div class="bg-amber-50 p-4 rounded-lg border border-amber-100">
-                            <div class="text-amber-600 text-2xl mb-2"><i class="fa-solid fa-language"></i></div>
-                            <h3 class="font-bold text-amber-800 mb-2">语言学分析</h3>
-                            <p class="text-sm text-amber-700">数字表述的语义边界、时间隐喻机制</p>
-                        </div>
-                        <div class="bg-amber-50 p-4 rounded-lg border border-amber-100">
-                            <div class="text-amber-600 text-2xl mb-2"><i class="fa-solid fa-brain"></i></div>
-                            <h3 class="font-bold text-amber-800 mb-2">认知科学</h3>
-                            <p class="text-sm text-amber-700">中文数字认知、跨文化认知差异</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 数学基础理论 -->
-            <div class="card md:col-span-2 p-8 theory-card relative">
-                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>
-                <div class="relative">
-                    <h2 class="text-3xl font-bold text-blue-700 mb-4 flex items-center">
-                        <i class="fa-solid fa-calculator mr-3"></i>数学基础理论视角
-                    </h2>
-                    <div class="space-y-4">
-                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                            <h3 class="font-bold text-blue-800 mb-2">非标准分析与超实数理论</h3>
-                            <p class="text-sm text-blue-700">通过引入无穷小和无穷大量的数系扩展实数系统，为处理世纪与年之间的巨大数量级差异提供新视角。</p>
-                        </div>
-                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                            <h3 class="font-bold text-blue-800 mb-2">模糊数学与模糊逻辑</h3>
-                            <p class="text-sm text-blue-700">为处理数值表达的不确定性和模糊性提供工具，解释"15"与"十七年"之间的语义等价性。</p>
-                        </div>
-                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                            <h3 class="font-bold text-blue-800 mb-2">多值逻辑与次协调逻辑</h3>
-                            <p class="text-sm text-blue-700">允许系统中存在矛盾而不导致逻辑爆炸，为看似矛盾的等式提供新的可能性。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 时间度量理论 -->
-            <div class="card md:col-span-2 p-8 theory-card relative">
-                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-purple"></div>
-                <div class="relative">
-                    <h2 class="text-3xl font-bold text-purple-700 mb-4 flex items-center">
-                        <i class="fa-solid fa-clock-rotate-left mr-3"></i>时间度量的跨文化视角
-                    </h2>
-                    <div class="space-y-4">
-                        <div class="bg-purple-50 p-4 rounded-lg border border-purple-100">
-                            <h3 class="font-bold text-purple-800 mb-2">中国传统历法</h3>
-                            <p class="text-sm text-purple-700">六十干支循环系统体现了非线性的时间观，与西方的线性纪年形成鲜明对比。</p>
-                        </div>
-                        <div class="bg-purple-50 p-4 rounded-lg border border-purple-100">
-                            <h3 class="font-bold text-purple-800 mb-2">西方格里高利历法</h3>
-                            <p class="text-sm text-purple-700">线性纪年系统，以耶稣诞生为起点进行计数，世纪定义存在微妙差异。</p>
-                        </div>
-                        <div class="bg-purple-50 p-4 rounded-lg border border-purple-100">
-                            <h3 class="font-bold text-purple-800 mb-2">现代物理学时间概念</h3>
-                            <p class="text-sm text-purple-700">相对论和量子力学彻底改变了我们对时间的理解，时间可能是一种涌现现象。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 语言学和认知科学 -->
-            <div class="card md:col-span-2 p-8 theory-card relative">
-                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-teal"></div>
-                <div class="relative">
-                    <h2 class="text-3xl font-bold text-teal-700 mb-4 flex items-center">
-                        <i class="fa-solid fa-language mr-3"></i>语言学和认知科学分析
-                    </h2>
-                    <div class="space-y-4">
-                        <div class="bg-teal-50 p-4 rounded-lg border border-teal-100">
-                            <h3 class="font-bold text-teal-800 mb-2">数字表述的语义边界</h3>
-                            <p class="text-sm text-teal-700">近似数值表达的研究揭示了人们如何处理数值的不确定性，"15"和"十七"可能在某个语义空间中具有高度重叠。</p>
-                        </div>
-                        <div class="bg-teal-50 p-4 rounded-lg border border-teal-100">
-                            <h3 class="font-bold text-teal-800 mb-2">认知语言学中的时间隐喻</h3>
-                            <p class="text-sm text-teal-700">人类主要通过空间隐喻来理解时间概念，这种空间化的时间理解为"世纪"和"年"之间的关系提供了认知基础。</p>
-                        </div>
-                        <div class="bg-teal-50 p-4 rounded-lg border border-teal-100">
-                            <h3 class="font-bold text-teal-800 mb-2">中文数字认知的特殊性</h3>
-                            <p class="text-sm text-teal-700">中文数字在大脑中具有特殊的神经表征模式，涉及非符号和符号双重表征系统。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 时间概念对比图表 -->
-            <div class="card md:col-span-2 p-8 flex flex-col justify-center relative">
-                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-red"></div>
-                <div class="relative">
-                    <h2 class="text-3xl font-bold text-red-700 mb-4 flex items-center">
-                        <i class="fa-solid fa-chart-line mr-3"></i>时间概念对比
-                    </h2>
-                    <div class="chart-container" style="height: 300px;">
-                        <canvas id="timeConceptChart"></canvas>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 数学逻辑与形式系统 -->
-            <div class="card md:col-span-4 p-8 theory-card relative">
-                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-green"></div>
-                <div class="relative">
-                    <h2 class="text-3xl font-bold text-green-700 mb-6 flex items-center">
-                        <i class="fa-solid fa-gears mr-3"></i>数学逻辑与形式系统的可能性
-                    </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <h3 class="font-bold text-green-800 mb-3">非经典逻辑系统的应用前景</h3>
-                            <ul class="space-y-2 text-green-700">
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                    <span>次协调逻辑允许系统中存在矛盾而不导致逻辑爆炸</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                    <span>三值逻辑引入了"不确定"或"矛盾"的中间真值</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                    <span>部分逻辑允许真值指派是未确定的或过度确定的</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-green-800 mb-3">非标准分析的技术路径</h3>
-                            <ul class="space-y-2 text-green-700">
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                    <span>超实数系统包含无穷小量和无穷大量</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                    <span>传递原理保证标准分析中的定理在超实数系统中仍然成立</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                    <span>单子概念可能为理解"15"和"十七年"的等价性提供基础</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 综合理论框架 -->
-            <div class="card md:col-span-4 p-8 flex flex-col justify-center relative">
-                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-amber"></div>
-                <div class="relative">
-                    <h2 class="text-3xl font-bold text-amber-700 mb-6 flex items-center">
-                        <i class="fa-solid fa-layer-group mr-3"></i>综合理论框架的构建
-                    </h2>
-                    <div class="bg-amber-50 p-6 rounded-lg border border-amber-100">
-                        <h3 class="font-bold text-amber-800 mb-4">多层次映射机制</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="bg-white p-4 rounded-lg shadow-sm">
-                                <div class="text-amber-600 text-xl mb-2"><i class="fa-solid fa-arrows-down-to-people"></i></div>
-                                <h4 class="font-bold text-amber-800 mb-2">第一层次</h4>
-                                <p class="text-sm text-amber-700">物理时间到认知时间的映射</p>
-                            </div>
-                            <div class="bg-white p-4 rounded-lg shadow-sm">
-                                <div class="text-amber-600 text-xl mb-2"><i class="fa-solid fa-arrows-down-to-line"></i></div>
-                                <h4 class="font-bold text-amber-800 mb-2">第二层次</h4>
-                                <p class="text-sm text-amber-700">数值表达的语义映射</p>
-                            </div>
-                            <div class="bg-white p-4 rounded-lg shadow-sm">
-                                <div class="text-amber-600 text-xl mb-2"><i class="fa-solid fa-arrows-down-to-square"></i></div>
-                                <h4 class="font-bold text-amber-800 mb-2">第三层次</h4>
-                                <p class="text-sm text-amber-700">文化符号的认知映射</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 结论 -->
-            <div class="card md:col-span-4 p-8 flex flex-col justify-center relative">
-                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>
-                <div class="relative">
-                    <h2 class="text-3xl font-bold text-blue-700 mb-4 flex items-center">
-                        <i class="fa-solid fa-flag-checkered mr-3"></i>结论
-                    </h2>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        通过对"$\frac{20}{3}$个世纪 = 15 = 十七年"这个反直觉等式的深入分析，我们构建了一个跨学科的理论框架，整合了数学基础理论、时间哲学、语言学分析和认知科学等多个维度的研究成果。
-                    </p>
-                    <p class="text-gray-700 leading-relaxed font-bold">
-                        我们的研究揭示了一个重要洞察：<span class="text-blue-600">看似荒谬的数学命题可能在特定的理论框架和认知语境中获得合理性</span>。这个等式的价值不在于它在经典数学中的正确性，而在于它挑战了我们对时间概念、数字表达和数学真理的传统理解。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-<script>
-    // 时间概念对比图表
-    const ctx = document.getElementById('timeConceptChart').getContext('2d');
-    const timeConceptChart = new Chart(ctx, {
-        type: 'radar',
-        data: {
-            labels: ['线性性', '循环性', '精确性', '主观性', '文化依赖性', '物理基础'],
-            datasets: [
-                {
-                    label: '西方时间概念',
-                    data: [9, 3, 8, 4, 5, 7],
-                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                    borderColor: 'rgba(59, 130, 246, 1)',
-                    borderWidth: 2,
-                    pointBackgroundColor: 'rgba(59, 130, 246, 1)'
-                },
-                {
-                    label: '中国时间概念',
-                    data: [4, 9, 6, 7, 8, 5],
-                    backgroundColor: 'rgba(139, 92, 246, 0.2)',
-                    borderColor: 'rgba(139, 92, 246, 1)',
-                    borderWidth: 2,
-                    pointBackgroundColor: 'rgba(139, 92, 246, 1)'
-                },
-                {
-                    label: '物理学时间概念',
-                    data: [7, 5, 9, 3, 4, 10],
-                    backgroundColor: 'rgba(239, 68, 68, 0.2)',
-                    borderColor: 'rgba(239, 68, 68, 1)',
-                    borderWidth: 2,
-                    pointBackgroundColor: 'rgba(239, 68, 68, 1)'
-                }
-            ]
-        },
-        options: {
-            maintainAspectRatio: false,
-            scales: {
-                r: {
-                    angleLines: {
-                        display: true,
-                        color: 'rgba(0, 0, 0, 0.1)'
+    <!-- 引入Font Awesome图标 -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // 奶龙主题黄
+                        milkdragon: {
+                            light: '#FFF380',
+                            DEFAULT: '#FFE666',
+                            dark: '#FFD700',
+                            accent: '#FF9900'
+                        },
+                        // 辅助色
+                        sky: '#E0F7FF',
+                        pink: '#FFE8F0'
                     },
-                    suggestedMin: 0,
-                    suggestedMax: 10,
-                    ticks: {
-                        stepSize: 2
+                    fontFamily: {
+                        cute: ['"Comic Sans MS"', '"Microsoft YaHei"', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'bounce-slow': 'bounce 2s ease-in-out infinite',
+                        'scale': 'scale 2s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        scale: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.05)' }
+                        }
                     }
-                }
-            },
-            plugins: {
-                legend: {
-                    position: 'bottom'
                 }
             }
         }
-    });
-</script>
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .bg-gradient-milk {
+                background: linear-gradient(135deg, #FFF380 0%, #FFE666 50%, #FFD700 100%);
+            }
+            .rotate-random {
+                transform: rotate(var(--rotate-deg, -5deg));
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-milk font-cute overflow-x-hidden opacity-0 transition-opacity duration-1000">
+    <!-- 装饰元素 - 漂浮气球 -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
+        <div class="absolute top-10 left-10 w-16 h-16 bg-pink rounded-full animate-float opacity-80 rotate-random" style="--rotate-deg: -3deg;"></div>
+        <div class="absolute top-20 right-20 w-20 h-20 bg-sky rounded-full animate-float opacity-80 rotate-random" style="--rotate-deg: 5deg; animation-delay: 0.5s;"></div>
+        <div class="absolute bottom-20 left-1/4 w-18 h-18 bg-milkdragon-accent rounded-full animate-float opacity-80 rotate-random" style="--rotate-deg: -8deg; animation-delay: 1s;"></div>
+        <div class="absolute bottom-40 right-1/3 w-14 h-14 bg-white rounded-full animate-float opacity-80 rotate-random" style="--rotate-deg: 10deg; animation-delay: 1.5s;"></div>
+    </div>
+
+    <!-- 主内容区 -->
+    <div class="relative z-10 container mx-auto px-4 py-10 md:py-20">
+        <!-- 标题区域 -->
+        <header class="text-center mb-10 md:mb-16">
+            <div class="inline-block animate-bounce-slow mb-4">
+                <!-- 奶龙图标（用圆形+表情模拟） -->
+                <div class="w-24 h-24 md:w-32 md:h-32 bg-milkdragon rounded-full relative mx-auto shadow-lg">
+                    <div class="absolute top-6 left-6 w-4 h-4 bg-black rounded-full"></div>
+                    <div class="absolute top-6 right-6 w-4 h-4 bg-black rounded-full"></div>
+                    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-8 h-4 bg-milkdragon-accent rounded-full"></div>
+                </div>
+            </div>
+            <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-milkdragon-accent text-shadow mb-2">
+                江文生日快乐！🥳
+            </h1>
+            <p class="text-[clamp(1.2rem,3vw,1.8rem)] text-gray-700">
+                奶龙专属生日祝福来啦～
+            </p>
+        </header>
+
+        <!-- 祝福卡片区域 -->
+        <main class="max-w-3xl mx-auto">
+            <!-- 第一张祝福卡片 -->
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-xl mb-8 transform hover:scale-105 transition-all duration-300 animate-scale">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-milkdragon rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
+                        🐲
+                    </div>
+                    <div>
+                        <p class="text-lg md:text-xl text-gray-800 leading-relaxed">
+                            江文江文！我是奶龙～祝你生日快乐呀！愿你每天都像我一样，吃饱饱、没烦恼，开心到飞起～
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第二张祝福卡片 -->
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-xl transform hover:scale-105 transition-all duration-300 animate-scale" style="animation-delay: 0.5s;">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-milkdragon rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
+                        🔔
+                    </div>
+                    <div>
+                        <p class="text-lg md:text-xl text-gray-800 leading-relaxed">
+                            叮咚！奶龙来送祝福啦！祝江文生日快乐！新的一岁，零食吃不完，好运挡不住，干啥都超顺利！
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 装饰性祝福语 -->
+            <div class="text-center mt-12 py-6 bg-milkdragon-light rounded-xl shadow-md">
+                <p class="text-xl md:text-2xl text-milkdragon-accent font-bold">
+                    🎂 愿江文新的一岁，快乐加倍，好运爆棚 🎂
+                </p>
+            </div>
+        </main>
+
+        <!-- 底部装饰 -->
+        <footer class="text-center mt-16 text-gray-600">
+            <p>✨ 奶龙陪你度过超甜的生日 ✨</p>
+            <div class="mt-4 flex justify-center gap-4 text-milkdragon-accent text-2xl">
+                <i class="fa fa-gift animate-bounce" style="animation-delay: 0s;"></i>
+                <i class="fa fa-star animate-bounce" style="animation-delay: 0.2s;"></i>
+                <i class="fa fa-heart animate-bounce" style="animation-delay: 0.4s;"></i>
+                <i class="fa fa-birthday-cake animate-bounce" style="animation-delay: 0.6s;"></i>
+                <i class="fa fa-glass animate-bounce" style="animation-delay: 0.8s;"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // 页面加载动画
+        document.addEventListener('DOMContentLoaded', () => {
+            // 显示页面
+            document.body.classList.add('opacity-100');
+            
+            // 随机调整漂浮元素的旋转角度
+            const floatElements = document.querySelectorAll('.rotate-random');
+            floatElements.forEach(el => {
+                const randomDeg = Math.random() * 20 - 10; // -10 到 10 度
+                el.style.setProperty('--rotate-deg', `${randomDeg}deg`);
+            });
+        });
+    </script>
+</body>
 </html>
